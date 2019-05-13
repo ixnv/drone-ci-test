@@ -12,7 +12,7 @@ func main() {
 
 	router.GET("/", func(context *gin.Context) {
 		context.JSON(200, struct {
-			ProjectName string `json:"project_name"`
+			ProjectName string `json:"project"`
 		}{
 			ProjectName: "single linked list",
 		})
