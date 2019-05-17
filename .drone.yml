@@ -13,12 +13,15 @@ steps:
 
 - name: build
   image: golang
-  volumes:
-  - name: deps
-    path: /go
   commands:
-  - go build
+    - go get
+    - go build -o output
+    - chmod +x output
 
-volumes:
-- name: deps
-  temp: {}
+- name: run
+  image: golang
+  commands:
+    - go get
+    - go build -o output
+    - chmod +x output
+    - ./output
