@@ -11,7 +11,7 @@ type (
 	List struct {
 		Head *Node `json:"head"`
 		Tail *Node `json:"tail"`
-		}
+	}
 )
 
 func (l *List) Append(newNode *Node) {
